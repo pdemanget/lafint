@@ -1,20 +1,20 @@
 ###
-# An ergonomic QWERTY variant for French:
+# Old version of lafint, an ergonomic QWERTY variant for French:
 #   - all accented chars can be made with the dead key and the 3×10 main keys;
 #   - all programming symbols can be made with AltGr and the 3×10 main keys;
 #   - on a full-size ISO keyboard, AltGr is handy but not required;
 #   - suitable for all compact keyboards (40%, 42 keys, 34 keys…).
 ##
 
-name = "Qwerty-lafint"
-name8 = "Qwerty-lafint"
+name = "lafint1"
+name8 = "lafint1"
 locale = "fr"
-variant = "lafint"
+variant = "lafint1"
 author = "Philippe Demanget (pdem)"
 description = "French (Qwerty-lafint)"
-url = "https://github.com/fabi1cazenave/qwerty-lafayette"
+url = "https://github.com/pdemanget/lafint"
 geometry = "ERGO"
-version = "0.9.0"
+version = "1.0.0"
 
 # To follow the 1DFH principle, all diacritics require a single dead key (1dk):
 #   - 1dk + vowel         = grave accent / alt   (à, è, ù, ç, ï, œ, æ, ñ, ß)
@@ -34,19 +34,18 @@ base = '''
 ·     ┃   æ │   è │   é │     │     ┃     │   ù │   ï │   œ │     ┃ [   ┆ ]   ┆
 ·     ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
 ·     ┃ A   │ S   │ D   │ F ª │ G – ┃ H   │ J   │ K   │ L   │ :   ┃ "   ┆ |   ┆
-·     ┃   à │   ß │   ê │   - │   – ┃   ŷ │   û │   î │   ô │ ' ; ┃***¨ ┆ \   ┆
+·     ┃   à │   ß │   ê │   - │   – ┃   ŷ │   û │   î │   ô │ ;   ┃***¨ ┆ \   ┆
 ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
 ┆ >   ┃ Z   │ X   │ C   │ V _ │ B — ┃ N   │ M º │ < • │ >   │ ? ÷ ┃           ·
 ┆ <   ┃   â │   × │   ç │   _ │   — ┃   ñ │   µ │ , · │ . … │ / ¿ ┃           ·
 ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚ · · · · · ·
 '''
 
-# pdem : moving back to qwerty positions: dead key "star", <>, é
+# Dèltrée: moving back to qwerty positions: dead key, <>, é
 # dead key: on single quote
 # Single quote, on star-space 
-# shift star double quote direct access
-# The rest is the remaining Fabien Cazenave "lafayette" conception
-
+# shift 1dk double quote direct access
+#
 # The AltGr layer focuses on the 28 programming symbols:
 #   - 10 symbols over the numbers
 #   - 2×8 symbols on the extra pinky keys (base and shift layers)
