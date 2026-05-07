@@ -21,37 +21,59 @@ Installation Linux
 Installation Windows
 --------------------
 
+   Elle est possible, il faut suivre la documentation de Kalamine
+
 Build et modifications
 ---------------------
-Partir d'une des 2 sources [lafint.toml](lafint.toml) ou [lafint1.toml](lafint1.toml).
-Construire avec [Kalamine](https://github.com/OneDeadKey/kalamine)
- - kalamine build lafint.toml
-Installer ou tester avec [XKalamine](https://github.com/OneDeadKey/kalamine)
- - xkalamine apply lafint.toml
+Le build se base sur Kalamine
+ - Installer kalamine cf le lien: [Kalamine](https://github.com/OneDeadKey/kalamine)
+ - Lire la doc de kalamine
+ - pour faire simple la principale commande à utiliser sera
 
+```
+  $ kalamine build lafint.toml
+```
+
+Avec cette commande, vous allez lancer le build de la source `lafint.toml` et créer dans le répertoire dist toutes les cibles dont vous avez besoin, pour moi uniquement le fichier symbols `dist/lafint.xkb_symbols`
+
+Vous pouvez également tester votre layout, une sorte d'installation rapide mais temporaire du layout:
+
+```
+  $ xkalamine apply lafint.toml
+```
+Cela applique directement le layout passé en paramètre sans étape intermédiaire.
+
+Je fourni les fichiers sources qui correspondent à mes versions de layout:
+ [lafint.toml](lafint.toml), [lafint1.toml](lafint1.toml).
+L'objectif étant de les modifier pour les adapter à votre usage. Le format me semble assez simple.
 
 Utilisation
 -----------
 ![layout](dist/lafint.svg)
 
-Tous les clavier qwerty internationaux, Lafayette ou Lafint se basent sur une touche morte, que l'on presse pour faire un accent avant de presser la voyelle.
+Tous les clavier qwerty internationaux, Lafayette ou Lafint se basent sur une touche morte, 
+que l'on presse pour faire un accent avant de presser la voyelle.
 Cette touche morte est notée "🟉" dans la disposition ci-dessus, elle est à la place de la touche ⌨️; sur le lafayette, et de ⌨️' en lafint et en international
+
+Différences avec le qwerty international
+----------------------------------------
 
 Voila les différences essentielles du lafint par rapport à un qwerty international: 
  - la touche d'accent ' ou 🟉 est plus orientée français et va donc produire les accents utilisés en français ,"éèê" etc., et aussi la cédille, le oe lié.
  - la touche ; est réutilisée pour produire une single quote ' en accès direct. ce caractère est beaucoup trop utilisé en français pour être en accès indirect
  - le caractère ; est produit par la combinaison 🟉; . on a réutilisé cette touche, mais les 2 touches sont côte à côte, c'est assez facile de mémoriser le pattern.
 
+Différences avec le qwerty lafayette
+------------------------------------
+Je suis parti du clavier lafayette, les modifications on été essentiellement de revenir à une disposition qwerty international sur une partie des touches.
 Voila les différences essentielles du lafint par rapport à un qwerty lafayette:
- - remettre la touche morte sur la meme touche qu'en qwerty international pour faciliter la mémorisation des touches
+ - remettre la touche morte pour faire l'accent sur la meme touche qu'en qwerty international pour faciliter la mémorisation des touches
  - remettre les caractères <> en accès shift ( il faut utiliser altgr avec le lafayette)
  - globalement on peut se servir de ce clavier sans utiliser le altgr
  - le ; qu'on a perdu en accès direct pour cause de réutilisation de touche se fait maintenant en accès indirect
  - les disposition de l'accents é, se fait comme en qwerty international plutot qu'en lafayette ( pas très clair mais à l'utilisation vous comprendrez)
  - Sur le shift touche morte 🟉, la touche redevient un accès direct pour conserver la touche " d'origine du qwerty international.
  
-
-
 
 Explications
 ============
@@ -71,19 +93,21 @@ Les dispositions utilisables pour le français sont pour moi:
  
 Pourquoi mon propre format
 --------------------------
-Honnêtement, le Qwerty-Lafayette est plus abouti. Si vous tombez ici par hasard, essayez d'abord le Qwerty-Lafayette pour comparer. 
+Le Qwerty-Lafayette est sans doute plus abouti. Si vous tombez ici par hasard, essayez d'abord le Qwerty-Lafayette pour comparer. 
 Voici pourquoi j'ai fait une autre disposition :
- - Pour utiliser Kalamine, l´outil qui sert a génerer aussi lafayette. c'est un outil de customisation amusant
- - Pour switcher plus facilement entre qwerty us international  et personnalisé (Lafayette ou Lafint)
- - Parce que le qwerty international est un peu plus lourd à utiliser (ê se tape en 2 touches shift ^ puis e, l'accent grave est loin des touches classiques, et l'apostrophe en accès indirect)
+ - Pour switcher plus facilement entre qwerty us international et Lafint: 
+     j'utilise fréquemment le qwerty international, je voulais le moins de différences possible.
+ - Parce que le qwerty international est malgré tout peu plus lourd à utiliser (ê se tape en 2 touches shift ^ puis e, l'accent grave est loin des touches classiques, et l'apostrophe en accès indirect)
  - Parce que le qwerty lafayette nécessite de réapprendre un peu plus le clavier.
- - Parce que je regarde mon clavier quand le tape, meme si c'est mal, et en qwerty international ou lafint, les touches correspondent bien a un qwerty us. 
+ - Parce que j'ai un clavier qwerty matériel et je voulais que les touches correspondent. Il n'y a pour l'instant qu'une seule différence au niveau du ;
+ - Pour utiliser Kalamine, l´outil de customisation de clavier qui sert à génerer aussi lafayette. c'est un outil de customisation amusant
  
 
 Alternative le lafint 1ère version
 ----------------------------------
-J'ai conservé les 2 dispositions lafint1 et lafint tout court en version 2. l'intérêt du lafint1 est qu'il est beaucoup plus proche du qwerty international, 
+J'ai conservé les 2 dispositions lafint1 et lafint tout court en version 2. 
+
+L'intérêt du lafint1 est qu'il est beaucoup plus proche du qwerty international.
 mais avec l'iconvénient dávoir lápostrophe en accès indirect, ce qui provoque pas mal de fautes comme on le voit sur cette phrase.
 
-A vous de voir si vous préférer galérer avec les apostrophes ou avec les point virgules: c'est quoi que vous utilisez plus: ' ou ;?
-
+A vous de voir si vous préférez ralentir sur les apostrophes ou les point virgules: Dans votre usage, qu'est-ce que vous utilisez le plus: ' ou ;?
